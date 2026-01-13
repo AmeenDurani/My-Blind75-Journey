@@ -8,8 +8,7 @@
 # Code
 class Solution:
     def maxArea(self, heights: List[int]) -> int:
-        array_length = len(heights)             # Cache this for optimal look-up time.
-        L, R = 0, array_length - 1              # Start on opposing sides of the List.
+        L, R = 0, len(heights) - 1              # Start on opposing sides of the List.
         res = min(heights[L], heights[R]) * R   # Return variable, initialized to starting area.
         
         # Iterate as long as the width is not zero.
